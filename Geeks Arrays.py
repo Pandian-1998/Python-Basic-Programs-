@@ -59,6 +59,26 @@ arr=[100,10,5,25,35,14]
 remainder(arr,11)
 
 
+#7-Reconstruct the array by replacing arr[i] with (arr[i-1]+1) % M
+
+def Reconstruct(lst,m):
+
+    count = 0
+    for i in range(len(lst)):
+         if (lst[i]!=-1):
+             count = i
+             break
+
+    for i in range(count+1,len(lst)):
+        if (lst[i]==-1):
+            lst[i]=(lst[i-1]+1) % m
+    print(*lst)
+# n=len(lst)
+m=10
+lst=[5,-1,7,-1,9,0]
+Reconstruct(lst,m)
+
+
 #8-Monotonic
 
 def Monotonic(A):
