@@ -352,6 +352,17 @@ print(remove_empty(l))
 
 #28 - remove duplicate integers from the list
 
+list = [2,2,3,4,4,5,10,6,9]
+print("The original list",list)
+
+newlist = []
+for i in list:
+    if i not in newlist:
+        newlist.append(i)
+print("The list after removing the duplicates",(newlist))
+
+#method-2
+
 def remove_duplicates(list):
     for i in range(0,len(list)):
         for j in range(i+1,len(list)):
