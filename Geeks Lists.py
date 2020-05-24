@@ -171,6 +171,22 @@ print(largest(list))
 
 #14-program to find second largest number in a list
 
+list = [10,30,40,7,5]
+n = len(list)
+firstmax = max(list[0],list[1])
+secondmax = min(list[0],list[1])
+for i in range(2,n):
+    if list[i]> firstmax:
+        secondmax = firstmax
+        firstmax = list[i]
+    elif list[i]>secondmax and firstmax != list[i]:
+        secondmax = list[i]
+    else:
+        if secondmax == firstmax:
+            secondmax = list[i]
+print(secondmax)
+
+#method-2
 def second_largest(lst):
     n = len(list)
     for i in range(0,n):
