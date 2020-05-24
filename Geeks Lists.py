@@ -61,13 +61,13 @@ print(counter)
 
 ##5-Ways to check if element exists in list
 
-# def check(list,find):
-#     for i in list:
-#         if find == i:
-#             print(i)
-# list=[1,2,3,4,5]
-# find = 3
-# check(list,find)
+def check(list,find):
+    for i in list:
+        if find == i:
+            print(i)
+list=[1,2,3,4,5]
+find = 3
+check(list,find)
 
 
 #6-clear the list
@@ -82,6 +82,14 @@ print("list after clearing",list)
 
 
 #7-reversing the list
+
+def ging(list):
+    new = []
+    for i in list:
+        new.insert(0,i)
+    return new
+list = ["geeks","for","geem"]
+print(ging(list))
 
 def reverse(list):
     list.reverse()
