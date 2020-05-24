@@ -375,11 +375,11 @@ print(remove_duplicates(list))
 #29-cumulative sum of list
 
 def cummulative(list):
-    count = 0
-    for i in list:
-        count = count + i
-        print(count)
-list=[10, 20, 30, 40, 50]
+    newlist = []
+    n = len(list)
+    newlist = [sum(list[0:i:1]) for i in range(0,n+1)]
+    return newlist[1:]
+list = [10,20,30,40,50]
 print(cummulative(list))
 
 
